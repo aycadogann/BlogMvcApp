@@ -1,0 +1,61 @@
+﻿@model BlogMVCApp.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<h1>@Model.Title</h1>
+<hr />
+<p>
+    <span class="glyphicon glyphicon-ok"></span>
+    @Model.DateAdded
+</p>
+<hr />
+<img src="https://picsum.photos/id/237/200/300" alt=" " />
+<hr />
+<blockquote>
+    <p>@Model.Description</p>
+</blockquote>
+<p>
+    @Model.Content
+</p>
+
+<div class="comment">
+    <div class="well">
+        <h4>Yorum Yap:</h4>
+        <form role="form">
+            <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+</div>
+<hr />
+<div class="media">
+    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
+    <div class="media-body">
+        <h5 class="mt-0">Media heading</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+</div>
+
+@section SagKolon
+{
+    <div class="well">
+        <h4>Blog search</h4>
+        <div class="input-group">
+            <input type="text" class="form-control" />
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div>
+    </div>
+
+    @{ Html.RenderAction("CategoryList", "Category");}
+}
+
+

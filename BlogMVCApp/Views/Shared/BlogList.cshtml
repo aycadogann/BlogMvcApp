@@ -19,11 +19,14 @@ else
                 @blog.DateAdded
             </p>
             <hr />
+
             <img class="img-responsive" src="https://picsum.photos/400/300" alt="" />
             <hr />
+
             <p>
                 @blog.Description
             </p>
+
             @Html.ActionLink("Daha Fazla...", "Details", "Blog", new { id = blog.Id }, new { @class = "btn btn-primary" })
         </div>
     }

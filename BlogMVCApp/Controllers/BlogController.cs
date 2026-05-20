@@ -31,7 +31,7 @@ namespace BlogMVCApp.Controllers
                                 CategoryId=i.CategoryId
                             }).AsQueryable();
 
-            if (string.IsNullOrEmpty("Key")==false)
+            if (string.IsNullOrEmpty(Key)==false)
             {
                 blogs = blogs.Where(i => i.Title.Contains(Key) || i.Description.Contains("Key"));
             }
